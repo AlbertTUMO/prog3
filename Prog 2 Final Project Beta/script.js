@@ -1,4 +1,4 @@
-function generate(matLen,gr,grEat,pr,gf,hl) {
+function generate(matLen, gr, grEat, pr, gf, hl) {
     let matrix = []
     for (let i = 0; i < matLen; i++) {
         matrix[i] = []
@@ -8,37 +8,37 @@ function generate(matLen,gr,grEat,pr,gf,hl) {
     }
 
     for (let i = 0; i < gr; i++) {
-        let x = Math.floor(Math.random()*matLen)
-        let y = Math.floor(Math.random()*matLen)
-        if(matrix[y][x] == 0) {
+        let x = Math.floor(Math.random() * matLen)
+        let y = Math.floor(Math.random() * matLen)
+        if (matrix[y][x] == 0) {
             matrix[y][x] = 1
         }
     }
     for (let i = 0; i < grEat; i++) {
-        let x = Math.floor(Math.random()*matLen)
-        let y = Math.floor(Math.random()*matLen)
-        if(matrix[y][x] == 0) {
+        let x = Math.floor(Math.random() * matLen)
+        let y = Math.floor(Math.random() * matLen)
+        if (matrix[y][x] == 0) {
             matrix[y][x] = 2
         }
     }
     for (let i = 0; i < pr; i++) {
-        let x = Math.floor(Math.random()*matLen)
-        let y = Math.floor(Math.random()*matLen)
-        if(matrix[y][x] == 0) {
+        let x = Math.floor(Math.random() * matLen)
+        let y = Math.floor(Math.random() * matLen)
+        if (matrix[y][x] == 0) {
             matrix[y][x] = 3
         }
     }
     for (let i = 0; i < gf; i++) {
-        let x = Math.floor(Math.random()*matLen)
-        let y = Math.floor(Math.random()*matLen)
-        if(matrix[y][x] == 0) {
+        let x = Math.floor(Math.random() * matLen)
+        let y = Math.floor(Math.random() * matLen)
+        if (matrix[y][x] == 0) {
             matrix[y][x] = 4
         }
     }
     for (let i = 0; i < hl; i++) {
-        let x = Math.floor(Math.random()*matLen)
-        let y = Math.floor(Math.random()*matLen)
-        if(matrix[y][x] == 0) {
+        let x = Math.floor(Math.random() * matLen)
+        let y = Math.floor(Math.random() * matLen)
+        if (matrix[y][x] == 0) {
             matrix[y][x] = 5
         }
     }
@@ -46,7 +46,7 @@ function generate(matLen,gr,grEat,pr,gf,hl) {
 }
 
 
-let matrix = generate(35,80,80,20,3,3)
+let matrix = generate(35, 80, 80, 20, 3, 3)
 
 
 var side = 15;
@@ -114,28 +114,16 @@ function draw() {
         }
     }
 
-    for(var i in grassArr){
+    for (var i in grassArr) {
         grassArr[i].mul()
-     }
-   
-     for(let i in grassEaterArr) {
-         grassEaterArr[i].eat()
-     }
-     for(let i in predatorArr) {
+    }
+
+    for (let i in grassEaterArr) {
+        grassEaterArr[i].eat()
+    }
+    for (let i in predatorArr) {
         predatorArr[i].eat()
     }
-     
-}
- 
 
-var obj = {
-    "first_name": "Vaxinak",
-    "last_name": "Qalantaryan",
-    "age": 17,
-    "tumo_student": true,
-    sayhello(){
-        console.log("privet");
-    }
 }
 
-obj.sayhello();

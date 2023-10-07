@@ -39,7 +39,7 @@ class Predator extends LivingCreature {
         this.energy--
         var emptyCells = this.chooseCell(0);
         var newCell = random(emptyCells);
-        if(newCell && this.energy >= 0) {
+        if (newCell && this.energy >= 0) {
             var newX = newCell[0];
             var newY = newCell[1];
             matrix[newY][newX] = matrix[this.y][this.x] ///kam 2 tiv@
@@ -56,27 +56,27 @@ class Predator extends LivingCreature {
         var newCell = random(emptyCells);
         var giftCells = random(this.chooseCell(4));
         if (giftCells) {
-            this.energy+=15
+            this.energy += 15
             var newX1 = giftCells[0];
             var newY1 = giftCells[1];
-            matrix[newY1][newX1] = matrix[this.y][this.x] 
+            matrix[newY1][newX1] = matrix[this.y][this.x]
             matrix[this.y][this.x] = 0
             this.x = newX1
             this.y = newY1
             for (var j in giftArr) {
-                if(newX1 == giftArr[j].x && newY1 == giftArr[j].y) {
-                    giftArr.splice(j, 1);   
+                if (newX1 == giftArr[j].x && newY1 == giftArr[j].y) {
+                    giftArr.splice(j, 1);
                     break;
                 }
 
-                if(this.energy >= 11) {
+                if (this.energy >= 11) {
                     this.mul()
                 }
                 else {
                     this.move()
                 }
             }
-        }else if(newCell) {
+        } else if (newCell) {
             this.energy++
             var newX = newCell[0];
             var newY = newCell[1];
@@ -90,8 +90,8 @@ class Predator extends LivingCreature {
                     break;
                 }
             }
-            
-            if(this.energy >= 11) {
+
+            if (this.energy >= 11) {
                 this.mul()
             }
         } else {

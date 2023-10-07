@@ -42,7 +42,7 @@ class GrassEater extends LivingCreature {
         if (newCell && this.energy >= 0) {
             var newX = newCell[0];
             var newY = newCell[1];
-            matrix[newY][newX] = matrix[this.y][this.x] 
+            matrix[newY][newX] = matrix[this.y][this.x]
             matrix[this.y][this.x] = 0
             this.x = newX
             this.y = newY
@@ -103,7 +103,7 @@ class GrassEater extends LivingCreature {
             this.energy++
             var newX = newCell[0];
             var newY = newCell[1];
-            matrix[newY][newX] = matrix[this.y][this.x] 
+            matrix[newY][newX] = matrix[this.y][this.x]
             matrix[this.y][this.x] = 0
             this.x = newX
             this.y = newY
