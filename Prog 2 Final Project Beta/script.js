@@ -127,3 +127,15 @@ function draw() {
      
 }
  
+
+var obj = {
+    "first_name": "Vaxinak",
+    "last_name": "Qalantaryan",
+    "age": 17,
+    "tumo_student": true,
+    sayhello(){
+        console.log("privet");
+    }
+}
+
+obj.sayhello();

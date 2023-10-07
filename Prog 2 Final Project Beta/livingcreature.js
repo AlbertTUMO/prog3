@@ -30,3 +30,4 @@ class LivingCreature {
         return found;
     }
 }
+
